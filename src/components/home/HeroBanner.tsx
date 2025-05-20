@@ -62,7 +62,7 @@ const HeroBanner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       goToNextSlide();
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [currentSlide]);
@@ -87,14 +87,14 @@ const HeroBanner: React.FC = () => {
           <div className="container-custom h-full flex items-center">
             <div className="max-w-3xl text-white z-10">
               <h1 
-                className={`text-5xl md:text-6xl font-bold mb-4 transform transition-all duration-700 ${
+                className={`text-5xl md:text-6xl text-gray-200 font-bold mb-4 transform transition-all duration-700 ${
                   index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
               >
                 {slide.title}
               </h1>
               <p 
-                className={`text-xl md:text-2xl mb-8 transform transition-all duration-700 delay-200 ${
+                className={`text-xl py-3 text-gray-500 mb-8 transform transition-all duration-700 delay-200 ${
                   index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
               >

@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white shadow-md py-2'
-          : 'bg-transparent py-4'
+          : 'bg-white/10 backdrop-blur py-4'
       }`}
     >
       <div className="container-custom mx-auto">
@@ -29,8 +29,8 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             className="flex items-center space-x-2 text-primary-800"
             onClick={() => setIsMenuOpen(false)}
           >
-            <GraduationCap className="h-8 w-8" />
-            <span className="font-serif font-bold text-xl md:text-2xl">
+            <GraduationCap className={`h-8 w-8 ${isScrolled ? '': 'text-white'}`}/>
+            <span className={`font-serif font-bold text-xl md:text-2xl ${isScrolled ? '': 'text-white'}`}>
               Athena Academy
             </span>
           </NavLink>
@@ -42,10 +42,11 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               className={({ isActive }) =>
                 `font-medium transition-colors ${
                   isActive
-                    ? 'text-primary-800 border-b-2 border-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    ? 'text-primary-600 border-b-2 border-primary-600'
+                    : `${isScrolled ? 'text-neutral-600' : 'text-gray-300'} hover:text-primary-800`
                 }`
               }
+              
             >
               Home
             </NavLink>
@@ -54,8 +55,8 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               className={({ isActive }) =>
                 `font-medium transition-colors ${
                   isActive
-                    ? 'text-primary-800 border-b-2 border-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    ? 'text-primary-600 border-b-2 border-primary-600'
+                    : `${isScrolled ? 'text-neutral-600' : 'text-gray-300'} hover:text-primary-800`
                 }`
               }
             >
@@ -66,8 +67,8 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               className={({ isActive }) =>
                 `font-medium transition-colors ${
                   isActive
-                    ? 'text-primary-800 border-b-2 border-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    ? 'text-primary-600 border-b-2 border-primary-600'
+                    : `${isScrolled ? 'text-neutral-600' : 'text-gray-300'} hover:text-primary-800`
                 }`
               }
             >
@@ -78,8 +79,8 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               className={({ isActive }) =>
                 `font-medium transition-colors ${
                   isActive
-                    ? 'text-primary-800 border-b-2 border-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    ? 'text-primary-600 border-b-2 border-primary-600'
+                    : `${isScrolled ? 'text-neutral-600' : 'text-gray-300'} hover:text-primary-800`
                 }`
               }
             >
@@ -90,8 +91,8 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               className={({ isActive }) =>
                 `font-medium transition-colors ${
                   isActive
-                    ? 'text-primary-800 border-b-2 border-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    ? 'text-primary-600 border-b-2 border-primary-600'
+                    : `${isScrolled ? 'text-neutral-600' : 'text-gray-300'} hover:text-primary-800`
                 }`
               }
             >
@@ -107,7 +108,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-neutral-700 hover:text-primary-800 focus:outline-none"
+            className="md:hidden text-neutral-600 hover:text-primary-800 focus:outline-none"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -129,7 +130,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
                 `py-2 font-medium ${
                   isActive
                     ? 'text-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    : 'text-neutral-600 hover:text-primary-800'
                 }`
               }
             >
@@ -142,7 +143,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
                 `py-2 font-medium ${
                   isActive
                     ? 'text-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    : 'text-neutral-600 hover:text-primary-800'
                 }`
               }
             >
@@ -155,7 +156,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
                 `py-2 font-medium ${
                   isActive
                     ? 'text-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    : 'text-neutral-600 hover:text-primary-800'
                 }`
               }
             >
@@ -168,7 +169,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
                 `py-2 font-medium ${
                   isActive
                     ? 'text-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    : 'text-neutral-600 hover:text-primary-800'
                 }`
               }
             >
@@ -181,7 +182,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
                 `py-2 font-medium ${
                   isActive
                     ? 'text-primary-800'
-                    : 'text-neutral-700 hover:text-primary-800'
+                    : 'text-neutral-600 hover:text-primary-800'
                 }`
               }
             >
