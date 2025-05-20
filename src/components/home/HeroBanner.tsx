@@ -15,9 +15,9 @@ const bannerSlides = [
     id: 2,
     title: "Excellence in STEM Education",
     description: "State-of-the-art laboratories and innovative teaching methodologies",
-    ctaText: "Explore Programs",
+    ctaText: "Explore Activities",
     ctaLink: "#",
-    image: "https://images.pexels.com/photos/256431/pexels-photo-256431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+    image: "../images/IMG_1011.JPEG"
   },
   {
     id: 3,
