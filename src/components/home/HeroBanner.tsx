@@ -7,9 +7,9 @@ const bannerSlides = [
     id: 1,
     title: "Shaping Tomorrow's Leaders",
     description: "Providing exceptional education and character development for over 25 years",
-    ctaText: "Apply Now",
+    ctaText: "Join Now",
     ctaLink: "#",
-    image: "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+    image: "../images/img1.jpg"
   },
   {
     id: 2,
@@ -77,7 +77,7 @@ const HeroBanner: React.FC = () => {
             index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
           }`}
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.image})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(${slide.image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
